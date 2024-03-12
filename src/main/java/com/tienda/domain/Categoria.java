@@ -14,9 +14,6 @@ public class Categoria implements Serializable { //serializacion porque se va al
     private static final long serialVersionUID = 1L; //para poder hacer el ciclo de la sumatoria de la categoria.
 
     @Id //id categoria es la llave de la tabla categoria. 
-    @OneToMany
-    @JoinColumn(name = "id_categoria")
-    List<Producto> productos;
     @GeneratedValue(strategy = GenerationType.IDENTITY) //Los valores generados que estrategia usan, identico a la BD 
     @Column(name = "id_categoria") //decir cual es el nombre en la base de datos. Se hace la asociación 
     private long idCategoria;

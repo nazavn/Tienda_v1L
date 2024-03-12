@@ -1,28 +1,20 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
- */
 package com.tienda.service;
 
 import com.tienda.domain.Producto;
-
 import java.util.List;
 
-/**
- *
- * @author zloai
- */
 public interface ProductoService {
 
-    // Obtener un listado de productos, con la opción de filtrar por activos
-    List<Producto> getProducto(boolean activos);
+// Se obtiene un listado de productos en un List
+    public List<Producto> getProductos(boolean activos);
 
-    // Obtener una categoría por su ID
-    Producto geProductosById(Long id);
+// Se obtiene un Producto, a partir del id de un producto     
+    public Producto getProducto(Producto producto);
 
-    // Guardar una nueva productos o actualizar una existente
-    void save(Producto Producto);
+// Se inserta un nuevo producto si el id del producto esta vacío    
+// Se actualiza un producto si el id del producto NO esta vacío     
+    public void save(Producto producto);
 
-    // Eliminar una productos por su ID
-    void deleteById(Long id);
+// Se elimina el producto que tiene el id pasado por parámetro    
+    public void delete(Producto producto);
 }
