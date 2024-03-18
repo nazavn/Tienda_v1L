@@ -7,7 +7,12 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "producto")
+
 public class Producto implements Serializable {
+    
+    @ManyToOne
+    @JoinColumn (name="id_categoria")
+    Categoria categoria;
 
     private static final long serialVersionUID = 1L;
 
