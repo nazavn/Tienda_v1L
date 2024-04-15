@@ -6,6 +6,8 @@ import lombok.EqualsAndHashCode;
 @Data
 @EqualsAndHashCode(callSuper=false)
 public class Item extends Producto {
+
+    private static final long serialVersionUID = 1L;
     private int cantidad; //Almacenar la cantidad de items de un producto
 
     public Item() {
