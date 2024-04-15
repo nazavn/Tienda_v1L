@@ -9,28 +9,30 @@ import lombok.Data;
 @Entity
 @Table(name = "categoria")
 
-public class Categoria implements Serializable { //serializacion porque se va almacenar ciertos datos en el disco
+public class Categoria implements Serializable {
 
-    private static final long serialVersionUID = 1L; //para poder hacer el ciclo de la sumatoria de la categoria.
+    private static final long serialVersionUID = 1L;
 
-    @Id //id categoria es la llave de la tabla categoria. 
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //Los valores generados que estrategia usan, identico a la BD 
-    @Column(name = "id_categoria") //decir cual es el nombre en la base de datos. Se hace la asociación 
-    private long idCategoria;
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column (name = "id_categoria")
+    private Long idCategoria;
     private String descripcion;
     private String rutaImagen;
     private boolean activo;
 
     @OneToMany
-    @JoinColumn(name = "id categoria", updatable = false)
+    @JoinColumn(name="id_categoria")
     List<Producto> productos;
-
-    public Categoria() {
+    public Categoria(){
+    
     }
-
-    public Categoria(String descripcion, boolean activo) {
+    
+    public Categoria(String descripcion, String rutaImagen, boolean activo) {
         this.descripcion = descripcion;
+        this.rutaImagen = rutaImagen;
         this.activo = activo;
     }
 
+    
 }
