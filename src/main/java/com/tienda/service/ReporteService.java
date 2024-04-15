@@ -10,10 +10,7 @@ import java.util.Map;
 import org.springframework.core.io.Resource;
 import org.springframework.http.ResponseEntity;
 
-/**
- *
- * @author perezer
- */
+
 public interface ReporteService  {
     public ResponseEntity<Resource>
             generaReporte(

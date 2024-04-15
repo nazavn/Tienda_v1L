@@ -8,10 +8,6 @@ import com.tienda.domain.Item;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author royam
- */
 public interface ItemService {
     List <Item> listaItems = new ArrayList<>();
     

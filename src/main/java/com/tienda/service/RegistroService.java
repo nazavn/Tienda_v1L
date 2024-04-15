@@ -9,10 +9,7 @@ import jakarta.mail.MessagingException;
 import org.springframework.ui.Model;
 import org.springframework.web.multipart.MultipartFile;
 
-/**
- *
- * @author royam
- */
+
 public interface RegistroService {
     public Model activar(Model model, String usuario, String clave); //activar por el correo que se envia
     
